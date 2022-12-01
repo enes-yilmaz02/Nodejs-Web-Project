@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/userData.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <title>User Data</title>
+  </head>
+  <body>
+   
+    <div class="container">
+      <div class="col">
+        <div class="row" style="align-items: center;">
+            <fieldset>
+                <legend>
+                    Sigorta Satın Alma Giriş Ekranı
+                    Lütfen Giriş Türünü Seçiniz
+                </legend>
+        
+                <div>
+                    <input class="radio" type="radio"  id="admin" onclick="clickAdmin()" name="drone"
+                        value="admin"
+                        checked>
+                    <label for="admin">Admin Girişi</label>
+                </div>
+        
+                <div>
+                    <input class="radio" type="radio"  id="user" onclick="clickUser()" name="drone"
+                        value="user"
+                        checked>
+                    <label class="radio" for="user">Kullanıcı Girişi</label>
+                </div>
+        
+                <div>
+                    <input class="radio" type="radio" id="sigorta" onclick="clickSigorta()" name="drone" value="sigorta">
+                    <label for="sigorta">Sigorta Firması Giriş</label>
+                </div>
+        
+                <div>
+                    <input class="radio" type="radio" id="danisman" onclick="clickDanisman()" name="drone"  value="danisman">
+                    <label for="danisman">Danışman Firması Giriş</label>
+                </div>
+            </fieldset>
+        </div>
+        <div class="row">
+          <div>
+            <span>
+              <input class="basic-slide" id="name" type="text" placeholder="Adı"
+                /><label for="name">Adı</label>
+            </span>
+            <span>
+              <input class="basic-slide" id="surname" type="text"
+                placeholder="Soyadı" /><label for="surname">Soyadı</label>
+            </span>
+            <span>
+              <input class="basic-slide" id="phone" type="text"
+                placeholder="Telefon Numarası" /><label for="phone">Telefon No</label>
+            </span>
+            <span>
+              <input class="basic-slide" id="bornDate" type="text"
+                placeholder="Doğum Tarihi" /><label for="bornDate">Doğum Tarihi</label>
+            </span>
+            <span>
+              <input class="basic-slide" id="startUser" type="text"
+                placeholder="İstenilen Başlangıç Tarihi" /><label
+                for="startUser"> Başlangıç Tarihi</label>
+            </span>
+            <span>
+              <input class="basic-slide" id="finishUser" type="text"
+                placeholder="İstenilen Bitiş Tarihi" /><label for="finishUser">
+                Bitiş Tarihi</label>
+            </span>
+            <span>
+              <input class="basic-slide" id="chosseFile" type="file"
+                 style="padding-left:175px;"  accept="image/png, image/jpeg" /><label for="chosseFile">
+                Passaport Resmi ekle</label>
+            </span>
+            
+        </span>
+          </div>
+          <div>
+            <span>
+              <input class="basic-slide" id="city" type="text"
+                placeholder="Şehir/Metropol" /><label for="city">Şehir</label>
+            </span>
+            <span>
+              <input class="basic-slide" id="town" type="text"
+                placeholder="İlçe/Kasaba" /><label for="town">İlçe</label>
+            </span>
+            <span>
+              <input class="basic-slide" id="region" type="text"
+                placeholder="Mahalle" /><label for="region">Mahalle</label>
+            </span>
+            <span>
+              <input class="basic-slide" id="street" type="text"
+                placeholder="Sokak" /><label for="street">Sokak</label>
+            </span>
+            <span>
+              <input class="basic-slide" id="apartNo" type="text"
+                placeholder="Apartman no" /><label for="apartNo">Apartman no</label>
+            </span>
+            <span>
+              <input class="basic-slide" id="houseNo" type="text"
+                placeholder="Ev no" /><label for="houseNo">Ev no</label>
+            </span>
+          </div>
+        </div>  <!--
+          row
+        -->
+      </div> <!--
+        col
+      -->
+    </div> <!--
+      container
+    -->
+  </body> <!--
+    body 
+  -->
+</html> <!--
+  html
+-->

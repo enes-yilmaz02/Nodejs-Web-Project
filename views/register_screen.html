@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="../css/tabs.css">
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+        <script type="text/javascript" src="function.js"></script>
+        <script type="text/javascript" src="firebase.js"></script>
+        <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
+        <script type="text/javascript" src="smtp.js"></script>
+        <title>Kayıt Ekranı</title>
+        
+    </head>
+    <body>
+        <fieldset>
+            <legend>
+                Sigorta Satın Alma Kayıt Ekranı
+                Lütfen Kayıt Türünü Seçiniz
+            </legend>
+
+
+            <div>
+                <input class="radio" type="radio"  id="user" onclick="clickUser()" name="registerRadio"
+                    value="1"
+                    checked>
+                <label for="user">Kullanıcı Kayıt</label>
+            </div>
+
+            <div>
+                <input class="radio" type="radio" id="sigorta" onclick="clickSigorta()" name="registerRadio" value="2">
+                <label for="sigorta">Sigorta Firması Kayıt</label>
+            </div>
+
+            <div>
+                <input class="radio" type="radio" id="danisman" onclick="clickDanisman()" name="registerRadio"  value="3">
+                <label for="danisman">Danışman Firması Kayıt</label>
+            </div>
+        </fieldset>
+        <div class="container a-container" id="a-container">
+            <form class="form" id="register" >
+                <h2 class="form_title title" id="innerHtml"> Kullanıcı  Hesap Oluştur</h2>
+                <span class="form__span">Veya kayıt için e-postayı
+                    kullanınız!</span>
+                <input class="form__input" type="text" id="name_surname"
+                    placeholder="Adınız Soyadınız" required>
+                <input class="form__input" type="email" id="email"
+                    placeholder="Email:mymail@gmail.com"
+                    required pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}">
+                <input class="form__input" type="text" id="phone" name="phone"
+                    placeholder="Telefon:05555555555" required maxlength="11"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                <input class="form__input" type="text" id="firma_name"
+                    placeholder="Firma Adı" required style="display: none;">
+                <input class="form__input" type="password" id="password"
+                    placeholder="Şifre" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,30}$">
+                <button class="form__button button " type="button"
+                    onclick="register()">Kayıt Ol</button>
+                <a href="/login">
+                    <button class="form__button button " id="btn_signin"
+                        type="button"
+                        onclick="">Oturum aç</button>
+                </a>
+            </form>
+        </div>
+      
+    </body>
+    <script type="text/javascript" src="registerChange.js"></script>
+</html>

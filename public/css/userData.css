@@ -1,0 +1,108 @@
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
+* {
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  background: #aaa;
+}
+
+.row {
+  color: #fff;
+  max-width:1200px;
+  margin: 0 auto;
+  padding: 60px 30px;
+  background: rgba(44, 106, 187, 0.952);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+
+.row:nth-child(2), .row:nth-child(8), .row:nth-child(10) {
+  background: #fff;
+}
+
+.row span {
+  position: relative;
+  display: block;
+  margin: 30px 10px;
+}
+.basic-slide {
+  display: block;
+  width: 515px;
+  text-align: center;
+  padding: 10px 0 10px 15px;
+  font-weight: 600;
+  color: rgba(44, 106, 187, 0.952);
+  background: #fff;
+  font-size: 17px;
+  color: #000;
+  border:solid 1px #000;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 40px;
+  transition: all 0.3s ease-in-out;
+}
+.basic-slide::-webkit-input-placeholder {
+  color: #000;
+  text-indent: 0;
+  opacity: 0.5;
+  font-weight: 600;
+}
+.basic-slide + label {
+  display: block;
+  position:absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  font-size: 17px;
+  padding: 10px 15px;
+  margin-right: 15px;
+  text-shadow: 0 1px 0 rgba(44, 106, 187, 0.952);
+  background: rgba(44, 106, 187, 0.952);
+  transition: all 0.3s ease-in-out;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.basic-slide:focus, .basic-slide:active {
+  color: #000;
+  text-indent: 0;
+  background: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.basic-slide:focus::-webkit-input-placeholder, .basic-slide:active::-webkit-input-placeholder {
+  color: #fff;
+}
+.basic-slide:focus + label, .basic-slide:active + label {
+  transform: translateX(-20%);
+}
+
+.nextPage{
+  color: rgba(44, 106, 187, 0.952);
+  font-size: 20px;
+  font-weight: 700;
+  width: 515px;
+  height: 45px;
+  -webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+  cursor: pointer;
+}
+
+.nextPage:hover{
+  color: #fff;
+  background-color:rgba(44, 106, 187, 0.952) ;
+  -webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}

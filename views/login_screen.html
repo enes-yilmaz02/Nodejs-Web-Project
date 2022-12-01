@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/tabs.css">
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+        <script type="text/javascript" src="function.js"></script>
+        <script type="text/javascript" src="firebase.js"></script>
+        <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
+        
+        <script src="../js/smtp.js"></script>
+        <title>Giriş Ekranı</title>
+      
+    </head>
+    <body>
+        <fieldset>
+            <legend>
+                Sigorta Satın Alma Giriş Ekranı
+                Lütfen Giriş Türünü Seçiniz
+            </legend>
+
+            <div>
+                <input class="radio" type="radio"  id="admin" onclick="clickAdmin()" name="drone"
+                    value="admin"
+                    checked>
+                <label for="admin">Admin Girişi</label>
+            </div>
+
+            <div>
+                <input class="radio" type="radio"  id="user" onclick="clickUser()" name="drone"
+                    value="user"
+                    checked>
+                <label class="radio" for="user">Kullanıcı Girişi</label>
+            </div>
+
+            <div>
+                <input class="radio" type="radio" id="sigorta" onclick="clickSigorta()" name="drone" value="sigorta">
+                <label for="sigorta">Sigorta Firması Giriş</label>
+            </div>
+
+            <div>
+                <input class="radio" type="radio" id="danisman" onclick="clickDanisman()" name="drone"  value="danisman">
+                <label for="danisman">Danışman Firması Giriş</label>
+            </div>
+        </fieldset>
+        <div class="container b-container" id="b-container">
+            <form class="form" id="b-form" method="" action="">
+                <h2 class="form_title title"  id="innerHtml">Kullanıcı Oturumu Aç</h2>
+                <span class="form__span">Veya e-posta hesabınızı kullanın</span>
+                <input class="form__input" type="text" id="email"
+                    placeholder="Email"
+                    required pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}">
+                <input class="form__input" type="password" id="password"
+                    placeholder="Şifre" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,30}$"><a class="form__link">Şifreni
+                    mi
+                    Unuttun?</a>
+                <button class="form__button button" id="btn-login" type="button" onclick="login()">Giriş</button>
+                <a href="/register">
+                    <button class="form__button button " id="btn_signup" type="button" onclick="">Kayıt ol</button>
+                </a>
+            </form>
+        </div>
+    </div>
+    </body>
+    <script type="text/javascript" src="loginChange.js"></script>
+</html>
